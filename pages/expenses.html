@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IBMS | Expenses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <img src="../assets/images/logo.svg" alt="IBMS logo" />
+          <div>
+            <h4 data-i18n="appName">IBMS</h4>
+            <p data-i18n="appSubtitle">Integrated Business Management System</p>
+          </div>
+        </div>
+        <nav class="sidebar-nav">
+          <a class="nav-link" href="dashboard.html"><i class="fas fa-tachometer-alt"></i><span data-i18n="sidebar.dashboard">Dashboard</span></a>
+          <a class="nav-link" href="products.html"><i class="fas fa-box-open"></i><span data-i18n="sidebar.products">Products</span></a>
+          <a class="nav-link" href="inventory.html"><i class="fas fa-warehouse"></i><span data-i18n="sidebar.inventory">Inventory</span></a>
+          <a class="nav-link" href="sales.html"><i class="fas fa-cash-register"></i><span data-i18n="sidebar.sales">Sales</span></a>
+          <a class="nav-link" href="purchases.html"><i class="fas fa-shopping-cart"></i><span data-i18n="sidebar.purchases">Purchases</span></a>
+          <a class="nav-link active" href="expenses.html"><i class="fas fa-file-invoice-dollar"></i><span>Expenses</span></a>
+          <a class="nav-link" href="customers.html"><i class="fas fa-users"></i><span data-i18n="sidebar.customers">Customers</span></a>
+          <a class="nav-link" href="suppliers.html"><i class="fas fa-truck"></i><span data-i18n="sidebar.suppliers">Suppliers</span></a>
+          <a class="nav-link" href="employees.html"><i class="fas fa-user-tie"></i><span data-i18n="sidebar.employees">Employees</span></a>
+          <a class="nav-link" href="attendance.html"><i class="fas fa-calendar-check"></i><span data-i18n="sidebar.attendance">Attendance</span></a>
+          <a class="nav-link" href="payroll.html"><i class="fas fa-money-bill-wave"></i><span data-i18n="sidebar.payroll">Payroll</span></a>
+          <a class="nav-link" href="reports.html"><i class="fas fa-chart-line"></i><span data-i18n="sidebar.reports">Reports</span></a>
+          <a class="nav-link" href="settings.html"><i class="fas fa-cog"></i><span data-i18n="sidebar.settings">Settings</span></a>
+        </nav>
+      </aside>
+
+      <div class="main-content">
+        <header class="topbar">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search expenses or categories" />
+          </div>
+          <div class="topbar-actions">
+            <button class="btn btn-sm btn-outline-primary" data-lang-switch="en">EN</button>
+            <button class="btn btn-sm btn-outline-primary" data-lang-switch="sw">SW</button>
+          </div>
+        </header>
+
+        <main class="page-content">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h2 class="section-title mb-1">Expenses</h2>
+              <p class="text-muted mb-0">Track business operating costs and supplier-related payments.</p>
+            </div>
+          </div>
+
+          <div class="panel-card mb-4">
+            <div class="d-flex justify-content-between align-items-end flex-wrap gap-3">
+              <div>
+                <label class="form-label">Filter by category</label>
+                <select id="expense-filter-category" class="form-select">
+                  <option value="all">All categories</option>
+                  <option value="transport">Transport</option>
+                  <option value="utilities">Utilities</option>
+                  <option value="rent">Rent</option>
+                  <option value="fuel">Fuel</option>
+                  <option value="salary">Salary</option>
+                  <option value="maintenance">Maintenance</option>
+                  <option value="general">General</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label">Filter by month</label>
+                <input id="expense-filter-month" type="month" class="form-control" />
+              </div>
+              <div>
+                <button id="expense-filter-clear" type="button" class="btn btn-outline-secondary">Clear</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-5">
+              <div class="panel-card">
+                <h5 class="mb-3">Record an expense</h5>
+                <form id="expense-form">
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label class="form-label">Expense title</label>
+                      <input id="expense-title" type="text" class="form-control" placeholder="Fuel, rent, utility, transport..." required />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Category</label>
+                      <select id="expense-category" class="form-select">
+                        <option value="transport">Transport</option>
+                        <option value="utilities">Utilities</option>
+                        <option value="rent">Rent</option>
+                        <option value="fuel">Fuel</option>
+                        <option value="salary">Salary</option>
+                        <option value="maintenance">Maintenance</option>
+                        <option value="general">General</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Amount (Tsh)</label>
+                      <input id="expense-amount" type="number" min="0.01" step="0.01" class="form-control" placeholder="250000" required />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Date</label>
+                      <input id="expense-date" type="date" class="form-control" required />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Payment method</label>
+                      <select id="expense-payment-method" class="form-select">
+                        <option value="Cash">Cash</option>
+                        <option value="Bank Transfer">Bank Transfer</option>
+                        <option value="Mobile Money">Mobile Money</option>
+                        <option value="Credit">Credit</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label">Notes</label>
+                      <textarea id="expense-notes" rows="3" class="form-control" placeholder="Optional note or receipt reference"></textarea>
+                    </div>
+                    <div class="col-12 d-flex gap-2">
+                      <button type="submit" class="btn btn-success"><i class="fas fa-save me-2"></i>Save Expense</button>
+                      <button type="reset" class="btn btn-outline-secondary">Clear</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="panel-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h5 class="mb-0">Expense list</h5>
+                  <span class="badge bg-primary-subtle text-primary" id="expense-total-label">Tshs 0</span>
+                </div>
+                <div class="table-responsive">
+                  <table class="table align-middle">
+                    <thead>
+                      <tr>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Method</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody id="expenses-table-body"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/language.js"></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>

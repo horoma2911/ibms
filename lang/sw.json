@@ -1,0 +1,114 @@
+{
+  "appName": "IBMS",
+  "appSubtitle": "Mfumo Jumuishi wa Usimamizi wa Biashara",
+  "login": {
+    "welcome": "Karibu Tena",
+    "subtitle": "Pata ufikiaji wa shughuli zako za biashara kwa ujasiri.",
+    "username": "Barua pepe",
+    "password": "Neno la siri",
+    "loginButton": "Ingia",
+    "languageLabel": "Lugha"
+  },
+  "sidebar": {
+    "dashboard": "Dashibodi",
+    "products": "Bidhaa",
+    "inventory": "Stock",
+    "sales": "Mauzo",
+    "purchases": "Manunuzi",
+    "customers": "Wateja",
+    "suppliers": "Wasambazaji",
+    "employees": "Wafanyakazi",
+    "attendance": "Mahudhurio",
+    "payroll": "Mishahara",
+    "reports": "Ripoti",
+    "settings": "Mipangilio"
+    ,"kiosk": "Kioski"
+  },
+  "topbar": {
+    "searchPlaceholder": "Tafuta moduli, ripoti au wafanyakazi",
+    "notifications": "Arifa",
+    "profile": "Msimamizi wa Uendeshaji"
+  },
+  "dashboard": {
+    "heading": "Muhtasari wa Uendeshaji",
+    "subheading": "Fuatilia shughuli za ununuzi, mauzo, wafanyakazi na hesabu.",
+    "todaysSales": "Mauzo ya Leo",
+    "monthlyRevenue": "Mapato ya Mwezi",
+    "expenses": "Matumizi",
+    "profit": "Faida",
+    "stock": "Stock Iliyopo",
+    "employees": "Wafanyakazi",
+    "salesChart": "Mauzo kwa Mwezi",
+    "productChart": "Bidhaa Zinazouzwa Zaidi",
+    "expensesChart": "Matumizi",
+    "stockChart": "Muhtasari wa Stock"
+  },
+  "products": {
+    "heading": "Usimamizi wa Bidhaa",
+    "subtitle": "Fuata bidhaa za kilimo na ujenzi kwa aina na uone hali ya stock kwa uwazi.",
+    "add": "Ongeza",
+    "edit": "Hariri",
+    "delete": "Futa",
+    "categoriesLabel": "Aina",
+    "lowStockLabel": "Arifa za stock ya chini",
+    "inventoryValueLabel": "Thamani ya stock",
+    "catalogTitle": "Katalogi ya bidhaa",
+    "catalogSubtitle": "Angalia katalogi yako kwa aina na ufuatilia afya ya stock.",
+    "categories": {
+      "all": "Yote",
+      "agriculture": "Kilimo",
+      "construction": "Ujenzi",
+      "inputs": "Vifaa"
+    },
+    "summary": {
+      "active": "3 zinazofanya kazi",
+      "activeDescription": "Kilimo, Ujenzi, Vifaa",
+      "lowStock": "Vipengee 2",
+      "lowStockDescription": "Mahindi na matofali ya kawaida yanahitaji kujazwa upya.",
+      "inventoryValue": "Tshs 4.8M",
+      "inventoryValueDescription": "Zinazingatia bidhaa za haraka sana."
+    },
+    "statuses": {
+      "healthy": "Zinauzwa vizuri",
+      "low": "Stock ya chini",
+      "reorder": "Pia upya"
+    }
+  },
+  "inventory": {
+    "heading": "Udhibiti wa Stock",
+    "subtitle": "Sawazisha viwango vya hesabu, harakati na pointi za upya."
+  },
+  "sales": {
+    "heading": "Mauzo na POS",
+    "subtitle": "Unda maagizo ya mauzo haraka, hesabu jumla na toa risiti."
+  },
+  "employees": {
+    "heading": "Usimamizi wa Wafanyakazi",
+    "subtitle": "Dhibiti kumbukumbu za wafanyakazi, majukumu na mshahara."
+  },
+  "attendance": {
+    "heading": "Ufuatiliaji wa Mahudhurio",
+    "subtitle": "Fuatilia uwepo, zamu na masaa ya kazi kwa wakati halisi."
+  },
+  "kiosk": {
+    "title": "MAHUDHURIO YA WAFANYAKAZI",
+    "scanPrompt": "Scan QR Code yako",
+    "checkInSuccess": "Kuingia kumefanikiwa",
+    "checkOutSuccess": "Kutoka kumefanikiwa",
+    "employeeNotFound": "Mfanyakazi hajapatikana",
+    "alreadyChecked": "Tayari ameingia leo",
+    "scanRetry": "Kuandaa skana..."
+  },
+  "payroll": {
+    "heading": "Usimamizi wa Mishahara",
+    "subtitle": "Tengeneza laha za mshahara na slips za malipo kwa ujasiri."
+  },
+  "reports": {
+    "heading": "Ripoti za Biashara",
+    "subtitle": "Tathmini utendaji wa mauzo, matumizi, stock na watu."
+  },
+  "settings": {
+    "heading": "Mipangilio ya Mfumo",
+    "subtitle": "Sanidi taarifa ya kampuni, miunganisho na mapendeleo ya uendeshaji."
+  }
+}

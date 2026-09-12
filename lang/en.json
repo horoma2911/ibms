@@ -1,0 +1,171 @@
+{
+  "appName": "IBMS",
+  "appSubtitle": "Integrated Business Management System",
+  "login": {
+    "welcome": "Welcome Back",
+    "subtitle": "Access your business operations with confidence.",
+    "username": "Email Address",
+    "password": "Password",
+    "loginButton": "Login",
+    "languageLabel": "Language"
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "inventory": "Inventory",
+    "sales": "Sales",
+    "purchases": "Purchases",
+    "customers": "Customers",
+    "suppliers": "Suppliers",
+    "employees": "Employees",
+    "attendance": "Attendance",
+    "payroll": "Payroll",
+    "reports": "Reports",
+    "settings": "Settings"
+    ,"kiosk": "Kiosk"
+  },
+  "topbar": {
+    "searchPlaceholder": "Search modules, reports or staff",
+    "notifications": "Notifications",
+    "profile": "Operations Lead"
+  },
+  "dashboard": {
+    "heading": "Executive Overview",
+    "subheading": "Monitor operations across procurement, sales, staffing and inventory.",
+    "todaysSales": "Today's Sales",
+    "monthlyRevenue": "Monthly Revenue",
+    "expenses": "Expenses",
+    "profit": "Profit",
+    "stock": "Available Stock",
+    "employees": "Employees",
+    "salesChart": "Monthly Sales",
+    "productChart": "Top Performing Products",
+    "expensesChart": "Expenses",
+    "stockChart": "Stock Overview"
+  },
+  "products": {
+    "heading": "Product Management",
+    "subtitle": "Track agricultural and construction goods by category with clear stock visibility.",
+    "add": "Add",
+    "edit": "Edit",
+    "delete": "Delete",
+    "categoriesLabel": "Categories",
+    "lowStockLabel": "Low stock alerts",
+    "inventoryValueLabel": "Inventory value",
+    "catalogTitle": "Product catalog",
+    "catalogSubtitle": "Go through your catalogue by category and monitor stock health.",
+    "categories": {
+      "all": "All",
+      "agriculture": "Agriculture",
+      "construction": "Construction",
+      "inputs": "Inputs"
+    },
+    "summary": {
+      "active": "3 active",
+      "activeDescription": "Agriculture, Construction, Inputs",
+      "lowStock": "2 items",
+      "lowStockDescription": "Maize and standard bricks need replenishment.",
+      "inventoryValue": "Tshs 4.8M",
+      "inventoryValueDescription": "Balanced across core fast-moving items."
+    },
+    "statuses": {
+      "healthy": "Healthy",
+      "low": "Low Stock",
+      "reorder": "Reorder"
+    },
+    "items": {
+      "rice": {
+        "category": "Agriculture",
+        "name": "Rice Grade A",
+        "description": "Premium white rice for wholesale and retail channel supply.",
+        "stockLabel": "Stock",
+        "stockValue": "380 units",
+        "buyingLabel": "Buying",
+        "buyingValue": "Tshs 240",
+        "sellingLabel": "Selling",
+        "sellingValue": "Tshs 290"
+      },
+      "maize": {
+        "category": "Agriculture",
+        "name": "Maize",
+        "description": "Fast-moving staple grain with regular supplier replenishment.",
+        "stockLabel": "Stock",
+        "stockValue": "140 units",
+        "buyingLabel": "Buying",
+        "buyingValue": "Tshs 180",
+        "sellingLabel": "Selling",
+        "sellingValue": "Tshs 220"
+      },
+      "seeds": {
+        "category": "Inputs",
+        "name": "Sunflower Seeds",
+        "description": "High-demand seed stock for seasonal planting programmes.",
+        "stockLabel": "Stock",
+        "stockValue": "210 units",
+        "buyingLabel": "Buying",
+        "buyingValue": "Tshs 160",
+        "sellingLabel": "Selling",
+        "sellingValue": "Tshs 200"
+      },
+      "cement": {
+        "category": "Construction",
+        "name": "Portland Cement",
+        "description": "Bulk cement units for contractor orders and site delivery.",
+        "stockLabel": "Stock",
+        "stockValue": "96 units",
+        "buyingLabel": "Buying",
+        "buyingValue": "Tshs 850",
+        "sellingLabel": "Selling",
+        "sellingValue": "Tshs 980"
+      },
+      "bricks": {
+        "category": "Construction",
+        "name": "Standard Bricks",
+        "description": "Core building material with recurring project demand.",
+        "stockLabel": "Stock",
+        "stockValue": "48 units",
+        "buyingLabel": "Buying",
+        "buyingValue": "Tshs 55",
+        "sellingLabel": "Selling",
+        "sellingValue": "Tshs 70"
+      }
+    }
+  },
+  "inventory": {
+    "heading": "Inventory Control",
+    "subtitle": "Reconcile stock levels, movement and reorder points."
+  },
+  "sales": {
+    "heading": "Sales & POS",
+    "subtitle": "Create fast sales orders, calculate totals and issue receipts."
+  },
+  "employees": {
+    "heading": "Employee Management",
+    "subtitle": "Maintain staff records, roles and salary details."
+  },
+  "attendance": {
+    "heading": "Attendance Tracking",
+    "subtitle": "Track presence, shifts and working hours in real time."
+  },
+  "kiosk": {
+    "title": "EMPLOYEE ATTENDANCE",
+    "scanPrompt": "Scan your QR Code",
+    "checkInSuccess": "Check-In Successful",
+    "checkOutSuccess": "Check-Out Successful",
+    "employeeNotFound": "Employee not found",
+    "alreadyChecked": "Already checked for today",
+    "scanRetry": "Preparing scanner..."
+  },
+  "payroll": {
+    "heading": "Payroll Management",
+    "subtitle": "Generate salary sheets and pay slips with confidence."
+  },
+  "reports": {
+    "heading": "Business Reports",
+    "subtitle": "Review performance across sales, expenses, inventory and people."
+  },
+  "settings": {
+    "heading": "System Settings",
+    "subtitle": "Configure company profile, integrations and operational preferences."
+  }
+}

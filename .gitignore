@@ -1,0 +1,33 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Node / frontend
+node_modules/
+npm-debug.log*
+
+# PHP / Laravel backend
+backend/vendor/
+backend/node_modules/
+backend/.env
+backend/.env.*
+backend/storage/*.key
+backend/storage/app/
+backend/storage/framework/
+backend/storage/logs/
+backend/bootstrap/cache/*
+backend/public/build/
+
+# Databases / local runtime
+*.sqlite
+*.sqlite3
+*.log
+
+# Build output
+/dist/
+/build/
+
+# Composer / caches
+composer.phar
+composer.lock

@@ -1,0 +1,6 @@
+{
+  "appId": "io.horoma.horoma",
+  "appName": "Horoma",
+  "webDir": ".",
+  "bundledWebRuntime": false
+}

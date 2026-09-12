@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IBMS | Employees</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <img src="../assets/images/logo.svg" alt="IBMS logo" />
+          <div>
+            <h4 data-i18n="appName">IBMS</h4>
+            <p data-i18n="appSubtitle">Integrated Business Management System</p>
+          </div>
+        </div>
+        <nav class="sidebar-nav">
+          <a class="nav-link" href="dashboard.html"><i class="fas fa-tachometer-alt"></i><span data-i18n="sidebar.dashboard">Dashboard</span></a>
+          <a class="nav-link" href="products.html"><i class="fas fa-box-open"></i><span data-i18n="sidebar.products">Products</span></a>
+          <a class="nav-link" href="inventory.html"><i class="fas fa-warehouse"></i><span data-i18n="sidebar.inventory">Inventory</span></a>
+          <a class="nav-link" href="sales.html"><i class="fas fa-cash-register"></i><span data-i18n="sidebar.sales">Sales</span></a>
+          <a class="nav-link" href="purchases.html"><i class="fas fa-shopping-cart"></i><span data-i18n="sidebar.purchases">Purchases</span></a>
+          <a class="nav-link" href="customers.html"><i class="fas fa-users"></i><span data-i18n="sidebar.customers">Customers</span></a>
+          <a class="nav-link" href="suppliers.html"><i class="fas fa-truck"></i><span data-i18n="sidebar.suppliers">Suppliers</span></a>
+          <a class="nav-link active" href="employees.html"><i class="fas fa-user-tie"></i><span data-i18n="sidebar.employees">Employees</span></a>
+          <a class="nav-link" href="attendance.html"><i class="fas fa-calendar-check"></i><span data-i18n="sidebar.attendance">Attendance</span></a>
+          <a class="nav-link" href="payroll.html"><i class="fas fa-money-bill-wave"></i><span data-i18n="sidebar.payroll">Payroll</span></a>
+          <a class="nav-link" href="reports.html"><i class="fas fa-chart-line"></i><span data-i18n="sidebar.reports">Reports</span></a>
+          <a class="nav-link" href="settings.html"><i class="fas fa-cog"></i><span data-i18n="sidebar.settings">Settings</span></a>
+        </nav>
+      </aside>
+
+      <div class="main-content">
+        <header class="topbar">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input id="employee-search" type="text" data-i18n-placeholder="topbar.searchPlaceholder" placeholder="Search employees by name, department or phone" />
+          </div>
+          <div class="topbar-actions">
+            <button class="btn btn-outline-primary"><i class="fas fa-bell"></i></button>
+            <div class="d-flex gap-2">
+              <button class="btn btn-sm btn-outline-primary" data-lang-switch="en">EN</button>
+              <button class="btn btn-sm btn-outline-primary" data-lang-switch="sw">SW</button>
+            </div>
+            <div class="user-chip d-none">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" alt="User" />
+              <div>
+                <div class="fw-bold">Amina K.</div>
+                <small class="text-muted" data-i18n="topbar.profile">Operations Lead</small>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main class="page-content">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h2 class="section-title mb-1" data-i18n="employees.heading">Employee Management</h2>
+              <p class="text-muted mb-0" data-i18n="employees.subtitle">Maintain staff records, roles and salary details.</p>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-5">
+              <div class="form-card">
+                <h5 class="fw-bold mb-3">Employee Record</h5>
+                <form id="employee-form">
+                  <div class="mb-3">
+                    <label class="form-label">Employee ID</label>
+                    <input class="form-control" name="employee_number" placeholder="Auto-generated" />
+                    <div id="employee-number-helper" class="form-text text-muted">Next employee ID: EMP-001</div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">First Name</label>
+                    <input class="form-control" name="first_name" placeholder="John" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Last Name</label>
+                    <input class="form-control" name="last_name" placeholder="Njoroge" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Phone</label>
+                    <input class="form-control" name="phone" placeholder="+254 700 123 456" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Salary</label>
+                    <input class="form-control" name="salary" type="number" min="0" step="5000" placeholder="95000" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Bank Name</label>
+                    <input id="bank-name" class="form-control" name="bank_name" placeholder="CRDB, NMB, NBC, etc." />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Bank Account Name</label>
+                    <input id="bank-account-name" class="form-control" name="bank_account_name" placeholder="Employee full name" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Bank Account Number</label>
+                    <input id="bank-account-number" class="form-control" name="bank_account_number" placeholder="0102030405" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Salary Due Day</label>
+                    <input id="salary-due-day" class="form-control" name="salary_due_day" type="number" min="1" max="31" value="28" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Position</label>
+                    <input class="form-control" name="position" placeholder="Operations Supervisor" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Department</label>
+                    <input class="form-control" name="department" placeholder="Logistics" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Status</label>
+                    <select class="form-select" name="status">
+                      <option value="active" selected>Active</option>
+                      <option value="inactive">Inactive</option>
+                      <option value="suspended">Suspended</option>
+                    </select>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button type="button" id="employee-save-btn" class="btn btn-primary-custom">Save</button>
+                    <button type="button" id="employee-cancel-edit" class="btn btn-outline-secondary d-none">Cancel Edit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="table-card">
+                <h5 class="fw-bold mb-3">Current Team</h5>
+                <div class="visually-hidden" aria-hidden="true">Edit Delete Employee ID Card Print ID Card</div>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr><th>Name</th><th>Position</th><th>Department</th><th>Salary</th><th>Status</th><th>Actions</th></tr>
+                    </thead>
+                    <tbody id="employee-table-body"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div class="modal fade" id="idCardModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content id-card-modal">
+          <div class="modal-header">
+            <h5 class="modal-title">Employee ID Card</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <div id="idCardPreview" class="id-card-preview mx-auto mb-3">
+              <div class="id-card-header">
+                <div class="brand-badge">HOROMA RICE MILL</div>
+              </div>
+              <div class="id-card-main">
+                <div class="id-card-placeholder">
+                  <div id="idCardPhoto" class="id-card-photo">EMP</div>
+                </div>
+                <div class="id-card-qr-box">
+                  <div class="id-card-label">QR CODE</div>
+                  <img id="idCardQrImage" src="" alt="Employee QR code" class="id-card-qr-image" />
+                </div>
+              </div>
+              <div class="id-card-name-row">
+                <div class="id-card-label">EMPLOYEE NAME</div>
+                <div id="idCardEmployeeName" class="id-card-name-value"></div>
+              </div>
+              <div class="id-card-footer">
+                <div class="id-card-label">ID</div>
+                <div id="idCardEmployeeNumber" class="id-card-id-value"></div>
+              </div>
+            </div>
+            <button id="btnPrintIdCard" class="btn btn-primary-custom">Print ID Card</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QR Modal -->
+    <div class="modal fade" id="qrModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Employee QR</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="qrImage" src="" alt="QR" style="width:200px;height:200px;margin-bottom:12px;border-radius:8px;" />
+            <div id="qrEmployeeName" class="fw-bold mb-2"></div>
+            <div id="qrEmployeeNumber" class="text-muted mb-3"></div>
+            <div class="d-flex gap-2 justify-content-center">
+              <button id="btnDownloadQr" class="btn btn-secondary-custom">Download</button>
+              <button id="btnRegenerateQr" class="btn btn-outline-danger">Regenerate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/language.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/employee-qr.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IBMS</title>
+    <meta http-equiv="refresh" content="0; url=login.html" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      body { font-family: 'Segoe UI', sans-serif; background: #013E37; color: white; display: grid; place-items: center; height: 100vh; margin: 0; }
+      a { color: #FFEFBF; text-decoration: none; font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Redirecting to IBMS login...</p>
+      <a href="login.html">Open login page</a>
+    </div>
+  </body>
+</html>
